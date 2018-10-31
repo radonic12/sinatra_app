@@ -12,10 +12,11 @@ end
 
 configure :development do
     DataMapper.setup(:default,'sqlite::memory:')
+    DataMapper.finalize
+    DataMapper.auto_migrate!
 end
 
-DataMapper.finalize
-DataMapper.auto_migrate!
+
 
 get '/' do
     #"Hello World!"
