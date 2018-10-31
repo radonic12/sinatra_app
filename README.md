@@ -50,7 +50,7 @@ Besøg https://dreadful-ghost-46904.herokuapp.com/
     indsætte den som action for formen:
     
         post '/search'  do
-        
+
             review = Review.all()
             if params[:name] != ""
                 review = review.all(:name.like => "%#{params[:name]}%")
