@@ -1,0 +1,72 @@
+<html ng-app="testApp">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<style>
+
+button{
+	   background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px solid black;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+	font-size:120%;
+	background-color: white;
+	
+}
+input{
+font-size:120%;
+width: 100px;
+
+}
+
+
+</style>
+</head>
+<body ng-controller="testController" align="center">	
+	
+	<br><br><br>
+<form method="POST" action="/reviews">
+	<input name="name" placeholder="name" required />
+	<input name="adress" placeholder="adress" required />
+	<input name="city" placeholder="city" required />
+	<input name="country" placeholder="country" required /> 
+	<input name="tlf" placeholder="tlf" />
+	<input type="submit" value="Opret ny virksomhed" style="width:150px;">
+</form>
+	
+
+
+	<br><br>
+    <button ng-click="getRequest()">Hvis alle virksomheder</button>
+	
+
+
+<br><br><br>
+	
+	<button ng-click="getRequest(id)">Hvis virksomhed med ID</button> <input ng-model="id" placeholder="id" required />
+    
+<br><br><br>
+	<table border="1" align="center">
+	    <thead>
+        	<tr>
+         		<td>id</td>
+			<td>name</td>
+			<td>adress</td>
+			<td>city</td>
+			<td>country</td>
+			<td>tlf</td>
+      		</tr>
+   	</thead>
+       <tr ng-repeat="(key,value) in array">
+         <td ng-repeat="(key,v) in value">{{v}}</td>
+      </tr>
+	
+         <td ng-repeat="(key,v) in value">{{v}}</td>
+      
+  </table>
+	
+    <script src="script.js"></script>
+</body>
+</html>
