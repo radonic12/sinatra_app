@@ -1,3 +1,3 @@
 require './application'
-#run Sinatra::Application
-run ExpenseTracker::API.new
+require './lib/review'
+run Sinatra::Application
