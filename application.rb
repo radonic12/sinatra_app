@@ -6,7 +6,14 @@ require 'rubygems'
 Bundler.require
 require 'review'
 
-DataMapper.setup(:default,'sqlite::memory:')
+configure :production do
+    DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_RED_URL'])
+end
+
+configure :development do
+    DataMapper.setup(:default,'sqlite::memory:')
+end
+
 DataMapper.finalize
 DataMapper.auto_migrate!
 
