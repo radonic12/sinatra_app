@@ -4,7 +4,7 @@ require 'bundler'
 require 'rubygems'
 
 Bundler.require
-require 'review'
+#require 'review'
 
 configure :production do
     DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_RED_URL'])
