@@ -13,7 +13,7 @@ testApp.controller('testController' , function ($scope, $http) {
 	id = "/"+id;
 	}
 	console.log("ID:"+id);  
-        $http.get("http://localhost:4567/reviews"+id)
+        $http.get("https://dreadful-ghost-46904.herokuapp.com/reviews"+id)
             .then(function successCallback(response){
 		if(id==""){
                 $scope.array = response.data;
