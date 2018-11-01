@@ -10,6 +10,11 @@ Besøg https://dreadful-ghost-46904.herokuapp.com/
 - Få informationer om en virksomhed:
     - Udfyld feltet id og tryk på "Vi virksomhed med ID"
 
+<<<<<<< HEAD
+=======
+curl -i /companies viser readme
+
+>>>>>>> cf7658a6c04f0753d70d142ef7d8b91086715333
 #Svar
 - Generelt
     - Det er blevet lagt meget lidt vægt på udseende.
@@ -50,6 +55,7 @@ Besøg https://dreadful-ghost-46904.herokuapp.com/
     indsætte den som action for formen:
     
         post '/search'  do
+<<<<<<< HEAD
         
             review = Review.all()
             if params[:name] != ""
@@ -62,6 +68,20 @@ Besøg https://dreadful-ghost-46904.herokuapp.com/
                 review = review.all(:city.like => "%#{params[:city]}%")
             end
 
+=======
+
+            review = Review.all()
+            if params[:name] != ""
+                review = review.all(:name.like => "%#{params[:name]}%")
+            end
+            if params[:adress] != ""
+                review = review.all(:adress.like => "%#{params[:adress]}%")
+            end
+            if params[:city] != ""
+                review = review.all(:city.like => "%#{params[:city]}%")
+            end
+
+>>>>>>> cf7658a6c04f0753d70d142ef7d8b91086715333
             if params[:country] != ""
                 review = review.all(:country.like => "%#{params[:country]}%")
             end
