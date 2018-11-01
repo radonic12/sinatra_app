@@ -10,11 +10,8 @@ Besøg https://dreadful-ghost-46904.herokuapp.com/
 - Få informationer om en virksomhed:
     - Udfyld feltet id og tryk på "Vi virksomhed med ID"
 
-<<<<<<< HEAD
-=======
 curl -i /companies viser readme
 
->>>>>>> cf7658a6c04f0753d70d142ef7d8b91086715333
 #Svar
 - Generelt
     - Det er blevet lagt meget lidt vægt på udseende.
